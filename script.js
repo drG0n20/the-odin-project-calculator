@@ -1,3 +1,5 @@
+
+
 //1.add function
 function add(a, b) {
   a + b;
@@ -31,3 +33,13 @@ function operate(operator, a, b) {
     alert("Something went wrong! Bad operator")
   }
 }
+
+
+const displayView = document.getElementById('display')
+const choices = document.querySelectorAll('button')
+let userChoice
+
+choices.forEach(choice => choice.addEventListener('click', (e) =>{
+  userChoice = e.target.id
+  displayView.innerHTML = userChoice
+}))
